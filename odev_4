@@ -1,0 +1,30 @@
+Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
+1-film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
+Çözüm
+---------------------------------------------------------------------------------------------------
+SELECT DISTINCT replacement_cost FROM film; --select unique replacement cost values from film table
+---------------------------------------------------------------------------------------------------
+2-film tablosunda bulunan replacement_cost sütununda birbirinden farklı kaç tane veri vardır?
+Çözüm
+--------------------------------------------------
+SELECT COUNT(DISTINCT replacement_cost) FROM film; 
+--select unique replacement cost values from film table and count function returns number of unique replacement cost values.
+------------------------------------------------------------------------------------------------------------------------------
+3-film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
+Çözüm
+-------
+SELECT COUNT(*) FROM film
+WHERE title LIKE 'T%' AND rating='G'; --Titles beginning with T and ratings are equal to G are counted by Count function.
+-------------------------------------------------------------------------------------------------------------------------
+4-country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
+Çözüm
+-----------------------------------
+SELECT COUNT(country) FROM country
+WHERE country LIKE '_____'; --country names which have just 5 characters from country table.
+-------------------------------------------------------------------------------------------
+5-city tablosundaki şehir isimlerinin kaç tanesi 'R' veya r karakteri ile biter?
+Çözüm
+----------------------------
+SELECT Count(city) FROM city
+WHERE city ILIKE '%r'; --city names which end with R or r characters from city table.
+-------------------------------------------------------------------------------------
