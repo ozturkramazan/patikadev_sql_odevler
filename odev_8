@@ -1,0 +1,24 @@
+CREATE TABLE employee (
+
+	id INT NOT NULL,
+	name VARCHAR(50) NOT NULL,
+	birthday DATE NOT NULL,
+	email VARCHAR(100)
+)
+-- komutlari ile employee isimli tablo oluşturuldu.
+
+--ardindan https://www.mockaroo.com/ yardimi ile 50 satirlik hazir veriler olusturulup tablomuza eklendi.
+
+-- ilk update islemi
+UPDATE employee
+SET name='Dimitri Pinniger'
+
+WHERE name='Dimitry Pinniger'
+----------------
+--ikinci update islemi
+Update employee
+Set name='Laurette Fernie'
+WHERE name= 'L;urette Fernie';
+-------------------
+--ucuncu update islemi
+
