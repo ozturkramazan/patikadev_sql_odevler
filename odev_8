@@ -21,4 +21,37 @@ Set name='Laurette Fernie'
 WHERE name= 'L;urette Fernie';
 -------------------
 --ucuncu update islemi
+UPDATE employee 
+SET name='Jonah Petson', birthday = '1940-11-03', email='jonah@abc.com'
+WHERE id = 12;
+---------------
+--dorduncu update islemi
+UPDATE employee 
+SET name='A%'
+WHERE name LIKE 'C%';
+---------------------
+--besinci update islemi
+UPDATE employee 
+SET birthday = '1970-10-10'
+WHERE birthday>'1960-01-01';
+-----------------------------
+--ilk delete islemi
+DELETE FROM employee
+WHERE birthday='1970-10-10';
+----------------------------
+--ikinci delete islemi
+DELETE FROM employee
+WHERE name LIKE 'A%';
+---------------------
+--ucuncu delete islemi
+DELETE FROM employee
+WHERE name ILIKE '%e%e%';
+-------------------------
+--dorduncu delete islemi
+DELETE FROM employee
+WHERE email ILIKE '%.com';
+--------------------------
+--besinci delete islemi
+DELETE FROM employee
+WHERE birthday<'1940.01.01';
 
